@@ -10,11 +10,12 @@ bool setup_wifi()
     Serial.println((String) "Connecting to Wifi : " + WIFI_SSID);
     WiFi.mode(WIFI_STA);
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-    if (WiFi.waitForConnectResult() != WL_CONNECTED)
+    delay(500);
+
+    if (WiFi.status() != WL_CONNECTED)
     {
-        Serial.println("Connect Failed Rebooting...");
-        delay(5000);
-        ESP.restart();
+        Serial.print(".");
+        delay(500);
     }
     Serial.println("WiFi connected");
     Serial.println("IP address: ");
