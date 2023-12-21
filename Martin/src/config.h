@@ -26,6 +26,7 @@
 // Display Setting
 
 // SD card settings
+#define SD_CS 5
 
 // LED indicator setting
 

@@ -36,7 +36,6 @@ void i2s_setpin()
 void setup_mic()
 {
     Serial.print("Setup I2S ...");
-
     delay(1000);
     i2s_install();
     i2s_setpin();
