@@ -1,23 +1,23 @@
-#include <Arduino.h>
-#include "./Log/console.cpp"
-
-// put function declarations here:
-int myFunction(int, int);
+#include "Arduino.h"
+#include "config.h"
+#include "mic/test.h"
+#include "mic/setup.h"
+#include "network/wifi_setup.h"
+#include "network/test.h"
+#include "speaker/setup.h"
+#include "speaker/test.h"
 
 void setup()
 {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
-  console.log(result);
+  Serial.begin(SERIAL_BAUD_RATE);
+  // setup_mic();
+  setup_wifi();
+  setup_speaker();
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y)
-{
-  return x + y;
+  // test_mic();
+  // test_internet();
+  test_speaker();
 }
