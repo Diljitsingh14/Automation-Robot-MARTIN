@@ -1,6 +1,6 @@
 // Wifi config
-#define WIFI_SSID "E2"
-#define WIFI_PASSWORD "frizparhai"
+#define WIFI_SSID "1+"
+#define WIFI_PASSWORD "m5xgi83h"
 
 // Mic config
 #define USE_I2S_MIC_INPUT
